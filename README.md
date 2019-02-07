@@ -122,7 +122,7 @@ Some time merge may conflict, below are explanations:
 `git revert` will undo the changes that were made by the provided commit and created a new commit to record the change.
 
 ## Git Reset
-`git reset` can be used to move the HEAD and current branch pointer to the referenced commit, erase commits(`git reset --hard`), move committed changes to the staging index(`git reset --soft`) and unstage committed changes(`git reset --mixed`).
+`git reset` can be used to move the HEAD and current branch pointer to the referenced commit, erase commits(`git reset --hard HEAD^`), move committed changes to the staging index(`git reset --soft`) and unstage committed changes(`git reset --mixed`).
 
 ## Parent Commit
 - `HEAD^` `HEAD~` `HEAD~1` indicate the parent commit of the current commit
