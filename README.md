@@ -60,9 +60,13 @@ nothing to commit, working directory clean
 
 ## Git Log
 The `git log` shows all the details of our repository. Commit SHA, Author, Date and modified details.
+
 `git log --oneline` shows the main information of each commit.
+
 `git log -p` shows information per page.
+
 `git log --stat` lists how many lines have been modified and where.
+
 `git log 8d3ea36` you can watch the specific SHA.
 
 ## Git Add
@@ -83,7 +87,8 @@ Sometime we may have tons of commits, and we do not know which commits have grea
 `git tag -d v1.0` can delete 'v1.0' tag.
 
 ## Git Branch
-The `git branch` can list all branch names in the repository, create new branches `git branch sidebar` or delete branch `git branch -d sidebar`. When we create a new branch, we can use `git checkout sidebar` to switch to `sidebar` branch. 
+The `git branch` can list all branch names in the repository, create new branches 
+`git branch sidebar` or delete branch `git branch -d sidebar`. When we create a new branch, we can use `git checkout sidebar` to switch to `sidebar` branch. 
 `git checkout -b new-branch` can create a new branch named `new-branch` and switch to it all in one command.
 
 ## Git Merge
@@ -104,4 +109,27 @@ Some time merge may conflict, below are explanations:
 - `HEAD^` `HEAD~` `HEAD~1` indicate the parent commit of the current commit
 - `HEAD^^` `HEAD~2` indicate the grandparent commit of the current commit
 - `HEAD^^^` `HEAD~3` indicate the great-grandparent commit of the current commit
+
 The main difference between the `^` and the `~` is when a commit is created from a merge. A merge commit has two parents. With a merge commit, the `^` reference is used to indicate the first parent of the commit while `^2` indicates the second parent. The first parent is the branch you were on when you ran git merge while the second parent is the branch that was merged in.
+
+# GitHub Tutorial
+
+## Git Remote
+The `git remote` is used to connect your local commited file to the online repository. 
+
+You should `git init` your local file, and create 'README.md' file by command `touch README.md`. Then commit it.
+
+After that, create a new repository on the GitHub that has the same name with your local file name.
+
+***Notice! DO NOT initial README.md file on GitHub***
+
+Then `git remote add nameyouwant URL(from the GitHub)`, the local file will connect with your online repository.
+
+You also can use `git remot -v` to check whethere or not.
+
+If shows like 
+```
+origin	https://github.com/ChenMetanoia/my-travel-plans.git (fetch)
+origin	https://github.com/ChenMetanoia/my-travel-plans.git (push)
+```
+Then you success! 
