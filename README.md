@@ -74,13 +74,14 @@ While you update your file, you should `git add file-name` first. This command w
 
 ## Git Commit
 `git commit` puts the file which is the staging index into the repository. Then you updated your file. As mentioned, you need to explain what you have done in this commit. `git commit -m 'explain what you have done in concision'`.
-`git commit --amend` can alter the most-recent commit.
+
+* If you have wrong spell or have a better description on this commit, `git commit --amend` can alter the most-recent commit.
 
 ## Git Diff
 The `git diff` command can be used to see changes that have been made but haven't been committed, yet.
 
 ## Git Ignore
-If you have some files or docs, do not want to commit. You can use `touch .gitignore` to create a `.gitignore` file. Open this file while using your editor like `atom .gitignore`. Type the file name which you want to be ignored like `project.docx` and save `.gitignore`.
+If you have some files or docs do not want to commit but have to stay these files in current repository. You can use `touch .gitignore` to create a `.gitignore` file. Open this file while using your editor like atom: `atom .gitignore`. Type the file name which you want to be ignored like `project.docx` and save `.gitignore`.
 
 ## Git Tag
 Sometime we may have tons of commits, and we do not know which commits have great progress. We can use `git tag -a v1.0` to tag this progress.
@@ -88,7 +89,7 @@ Sometime we may have tons of commits, and we do not know which commits have grea
 
 `git shortlog`, a quick way that we can see how many commits each contributor has added to the repository
 
-⚠️`git shortlog -s -n` If we just want to see just the number of commits that each developer has made, we can add a couple of flags: `-s` to show just the number of commits (rather than each commit's message) and `-n` to sort them numerically (rather than alphabetically by author name). (By Udacity)
+⚠️`git shortlog -s -n` If we just want to see just the number of commits that each developer has made, we can add a couple of flags: `-s` to show just the number of commits (rather than each commit's message) and `-n` to sort them numerically (rather than alphabetically by author name).
 
 `git log --author=Surma` filter by author
 
@@ -103,7 +104,7 @@ git log --grep bug
 git log --grep="unit tests"
 ```
 
-Grep is a pattern matching tool. It is way beyond the scope of this course to cover grep. But as a brief intro, if you were to run `git log --grep "fort"`, then Git will display only the commits that have the character `f` followed by the character `o` followed by `r` followed by `t`.
+Grep is a pattern matching tool. If you were to run `git log --grep "fort"`, then Git will display only the commits that have the character `f` followed by the character `o` followed by `r` followed by `t`.
 
 ## Git Branch
 The `git branch` can list all branch names in the repository, create new branches 
