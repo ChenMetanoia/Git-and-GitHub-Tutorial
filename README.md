@@ -168,19 +168,19 @@ git pull origin master
 When `git pull` is run, the following things happen:
 - the commit(s) on the remote branch are copied to the local repository
 - the local tracking branch (`origin/master`) is moved to point to the most recent commit
-- the local tracking branch (`origin/master`) is merged into the local branch (`master`) -Udacity
+- the local tracking branch (`origin/master`) is merged into the local branch (`master`)
 
 ## Git Fetch
-`git fetch origin master` Git fetch is used to retrieve commits from a remote repository's branch but it does not automatically merge the local branch with the remote tracking branch after those commits have been received. (By Udacity)
+`git fetch origin master` Git fetch is used to retrieve commits from a remote repository's branch but it does not automatically merge the local branch with the remote tracking branch after those commits have been received.
 
-You can think of `git fetch` as half of a `git pull`. The other half of `git pull` is the merging aspect. (By Udacity)
+You can think of `git fetch` as half of a `git pull`. The other half of `git pull` is the merging aspect.
 
-One main point when you want to use `git fetch` rather than `git pull` is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote. (By Udacity)
+One main point when you want to use `git fetch` rather than `git pull` is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote.
 
 ## Fork
-It means "filesystem check" and refers to auditing the files for consistency. In version control terminology if you "fork" a repository that means you duplicate it. Typically you fork a repository that belongs to someone else. So you make an identical copy of their repository and that duplicate copy now belongs to you. (By Udacity)
+It means "filesystem check" and refers to auditing the files for consistency. In version control terminology if you "fork" a repository that means you duplicate it. Typically you fork a repository that belongs to someone else. So you make an identical copy of their repository and that duplicate copy now belongs to you.
 
-This concept of "forking" is also different from "cloning". When you clone a repository, you get an identical copy of the repository. But cloning happens on your local machine and you clone a remote repository. When you fork a repository, a new duplicate copy of the remote repository is created. This new copy is also a remote repository, but it now belongs to you. (By Udacity)
+This concept of "forking" is also different from "cloning". When you clone a repository, you get an identical copy of the repository. But cloning happens on your local machine and you clone a remote repository. When you fork a repository, a new duplicate copy of the remote repository is created. This new copy is also a remote repository, but it now belongs to you.
 
 If you need to keep up with a project's changes and want to be notified of when things change, GitHub offers a "Watch" feature. After "Watch", command `git remote add upstream URL` gives a connection to the source repository. When the source repository has update, we can use `git fetch upstream master` to update the new version to our local repository. So cooooooooool! 🥳
 
